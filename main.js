@@ -31,17 +31,23 @@ form.addEventListener('submit', function(e) {
 	    city.innerHTML = data.data.city;
 	    temp.innerHTML = data.data.wendu + ' °C';
 	    cold.innerHTML = data.data.ganmao;
+
+	    var forecastHeader = document.createElement('h2');
+	    forecastHeader.innerHTML= 'Forecast';
+	    forecast.parentNode.insertBefore(forecastHeader, forecast)
 	    for(var i of data.data.forecast) {
 	    	var tempLi = document.createElement('li');
 	    	tempLi.innerHTML =
-	    	'<p>日期: ' + i.date + '</p>' +
-	    	'<p>风力: ' + i.fengli + '</p>' +
-	    	'<p>风向: ' + i.fengxiang + '</p>' +
-	    	'<p>最高温: ' + i.high + '</p>' +
-	    	'<p>最低温: ' + i.low + '</p>' +
-	    	'<p>类型: ' + i.type + '</p>';
+	    	'<p><span>日期: </span><span>' + i.date + '</span></p>' +
+	    	'<p><span>风力: </span><span>' + i.fengli + '</span></p>' +
+	    	'<p><span>风向: </span><span>' + i.fengxiang + '</span></p>' +
+	    	'<p><span>最高温: </span><span>' + i.high + '</span></p>' +
+	    	'<p><span>最低温: </span><span>' + i.low + '</span></p>' +
+	    	'<p><span>类型: </span><span>' + i.type + '</span></p>';
 
 	    	forecast.appendChild(tempLi);
 	    }
+
+	    input.value = ''
 	});
 })
