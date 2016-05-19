@@ -2,7 +2,7 @@
   "manifest_version":2,
   "name":"简单天气",
   "description":"简单天气预报",
-  "version":"1.0",
+  "version":"1.0.0",
   "icons": {
         "16": "images/sun16.png",
         "48": "images/sun48.png",
@@ -12,5 +12,12 @@
       "default_icon":"images/sun48.png",
       "default_title":"天气预报",
       "default_popup":"popup.html"
-  }
+  },
+  "permissions":[
+     "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=*",
+     "http://int.dpool.sina.com.cn/iplookup/iplookup.php",
+     "http://int.dpool.sina.com.cn/iplookup/",
+     "http://int.dpool.sina.com.cn/",
+     "http://wthrcdn.etouch.cn/weather_mini?city=北京"
+  ]
 }
