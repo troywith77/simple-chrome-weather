@@ -12,8 +12,8 @@ function fetch(url, callback) {
 
 function getWeather(value) {
 	fetch('http://wthrcdn.etouch.cn/weather_mini?city=' + value, function(data) {
-	    if(!data) return;
-	    data = JSON.parse(data);
+    if(!data) return;
+    data = JSON.parse(data);
 		forecast.innerHTML = '';
 	    console.log(data.data)
 	    forecastHeader.innerHTML = ''
